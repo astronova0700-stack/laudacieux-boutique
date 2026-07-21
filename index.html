@@ -53,14 +53,16 @@ h2{font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:.03em;margin-bottom:36px}
 .swiper-slide img{width:100%;height:100%;object-fit:cover}
 .swiper-slide .tag{position:absolute;left:14px;bottom:14px;background:rgba(20,20,20,.85);border:1px solid rgba(201,162,75,.5);padding:6px 14px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
 .swiper-button-next,.swiper-button-prev{color:var(--or)}
-.selection .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center}
+.selection{text-align:center}
+.selection .grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:36px}
 @media(max-width:860px){.selection .grid{grid-template-columns:1fr}}
-.selection .imgs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.selection .imgs img{height:58vh;min-height:340px;width:100%;object-fit:cover;border-radius:3px}
-.selection p{line-height:1.9;opacity:.85;font-size:1.02rem;margin-bottom:18px}
-.points{list-style:none;margin-top:8px}
-.points li{padding:10px 0;border-bottom:1px solid rgba(201,162,75,.25);font-size:.92rem;letter-spacing:.05em}
-.points li::before{content:'—';color:var(--or);margin-right:10px}
+.selection .card{position:relative;height:65vh;min-height:420px;overflow:hidden}
+.selection .card img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.selection .card:hover img{transform:scale(1.05)}
+.selection .card .label{position:absolute;bottom:0;left:0;right:0;padding:70px 24px 30px;font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-style:italic;color:var(--or);text-align:left;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,transparent 100%);opacity:0;transition:opacity .5s;pointer-events:none}
+.selection .card:hover .label{opacity:1}
+@media(max-width:860px){.selection .card{height:55vh;min-height:320px}.selection .card .label{opacity:1}}
+.selection .quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.6rem);font-style:italic;color:var(--or);margin-top:50px;opacity:.95;line-height:1.4}
 .infos{background:var(--noir2)}
 .carte-une{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#1e1e1e;border:1px solid rgba(201,162,75,.35);margin-bottom:36px}
 @media(max-width:860px){.carte-une{grid-template-columns:1fr}}
@@ -152,20 +154,16 @@ footer .logo{font-size:1.2rem;display:block;margin-bottom:10px;opacity:1}
   <div class="kicker">Collections</div>
   <h2>La Sélection</h2>
   <div class="grid">
-    <div class="imgs">
+    <div class="card">
       <img src="photos/grande_taille_chemises.jpg" alt="Portant grande taille">
-      <img src="photos/noeuds_papillon_1.jpg" alt="Accessoires">
+      <div class="label">Grande Taille</div>
     </div>
-    <div>
-      <p>Une sélection composée avec vous — du casual au détail qui finit le look. Vous choisissez les pièces à mettre en avant, le site s'adapte.</p>
-      <p>Et parce que le style n'a pas de taille, un portant entier est dédié à la grande taille.</p>
-      <ul class="points">
-        <li>Contenu choisi par vous</li>
-        <li>Grande taille assumée</li>
-        <li>Conseil en boutique</li>
-      </ul>
+    <div class="card">
+      <img src="photos/noeuds_papillon_1.jpg" alt="Accessoires">
+      <div class="label">Accessoires</div>
     </div>
   </div>
+  <p class="quote">Chaque pièce est choisie, pas alignée.</p>
 </section>
 <section class="infos reveal" id="informations">
   <div class="kicker">Informations</div>
