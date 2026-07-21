@@ -92,12 +92,21 @@ h2{font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:.03em;margin-bottom:36px}
 .venir .map{width:100%;height:100%;min-height:450px;border:0;border-radius:6px;filter:grayscale(1) contrast(1.05)}
 .venir .panel{background:var(--noir2);padding:44px 38px;border:1px solid rgba(201,162,75,.3)}
 .venir .panel h3{font-size:1.9rem;margin-bottom:22px}
-.venir .ligne{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.95rem;opacity:.85}
+.venir .ligne{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.95rem;opacity:.85;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .venir .ligne b{font-weight:500;color:var(--or);display:inline-block;min-width:110px;letter-spacing:.08em}
+.socials{display:flex;gap:14px;align-items:center}
+.socials a{color:var(--or);transition:.3s}
+.socials a:hover{color:#e4c06d}
+.socials svg{width:28px;height:28px}
+.venir .ligne a[href^="tel"]{color:var(--or);font-weight:500}
 .btn{display:inline-block;margin-top:28px;background:var(--or);color:#141414;padding:14px 34px;letter-spacing:.15em;text-transform:uppercase;font-size:.8rem;font-weight:600;transition:.3s}
 .btn:hover{background:#d9b661}
 footer{padding:44px 5vw;text-align:center;font-size:.8rem;opacity:.55;letter-spacing:.1em;border-top:1px solid rgba(201,162,75,.2)}
 footer .logo{font-size:1.2rem;display:block;margin-bottom:10px;opacity:1}
+footer .socials{justify-content:center;margin:16px 0 10px}
+footer .credit{display:block;margin-top:8px;font-size:.72rem;letter-spacing:.08em}
+footer .credit a{color:var(--or);opacity:.75;transition:.3s}
+footer .credit a:hover{opacity:1}
 .lightbox-img{cursor:pointer;transition:transform .4s}
 .lightbox-img:hover{transform:scale(1.02)}
 .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:100;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:20px}
@@ -213,8 +222,10 @@ footer .logo{font-size:1.2rem;display:block;margin-bottom:10px;opacity:1}
     <div class="panel">
       <h3>L'audacieux Boutique</h3>
       <div class="ligne"><b>Adresse</b> 5, rue des Granges — 74200 Thonon-les-Bains</div>
-      <div class="ligne"><b>Horaires</b> Du mardi au samedi</div>
-      <div class="ligne"><b>Suivre</b> Instagram &amp; Facebook — L'audacieux Boutique</div>
+      <div class="ligne"><b>Horaires</b> Mardi – Samedi : 9h30 – 18h30</div>
+      <div class="ligne"><b></b> Dimanche – Lundi : fermé</div>
+      <div class="ligne"><b>Téléphone</b> <a href="tel:+33458662977">04 58 66 29 77</a></div>
+      <div class="ligne"><b>Suivre</b> <span class="socials"><a href="https://www.instagram.com/laudacieuxboutique74/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="https://www.facebook.com/p/Laudacieux-Boutique-61558575823199/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></span></div>
       <a class="btn" href="https://www.google.com/maps/search/?api=1&query=5+rue+des+Granges+74200+Thonon-les-Bains" target="_blank" rel="noopener">Itinéraire</a>
     </div>
   </div>
@@ -222,6 +233,8 @@ footer .logo{font-size:1.2rem;display:block;margin-bottom:10px;opacity:1}
 <footer>
   <span class="logo">L'audacieux<em>Boutique</em></span>
   5, rue des Granges — 74200 Thonon-les-Bains
+  <div class="socials"><a href="https://www.instagram.com/laudacieuxboutique74/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="https://www.facebook.com/p/Laudacieux-Boutique-61558575823199/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div>
+  <span class="credit"><a href="https://lemannova.com" target="_blank" rel="noopener">Réalisé par Leman Nova</a></span>
 </footer>
 <div class="lightbox" id="lightbox"><span class="close">&times;</span><img src="" alt=""></div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
